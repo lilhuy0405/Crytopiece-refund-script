@@ -1,14 +1,13 @@
-import {ethers} from "ethers";
+import {ethers, utils} from "ethers";
 import {BSC_MAINNET_RPC_URL} from "./constants";
-import {TaskOne, TaskTwo} from "./tasks";
+import {TaskOne, TaskThree, TaskTwo} from "./tasks";
 
 
 async function main() {
+  const url = "https://bsc-dataseed2.defibit.io"
   const provider = new ethers.providers.JsonRpcProvider(BSC_MAINNET_RPC_URL);
-  // const taskOne = new TaskOne(provider);
-  // await taskOne.run();
-  const taskTwo = new TaskTwo(provider);
-  await taskTwo.run();
+  const taskThree = new TaskThree(provider);
+  // await taskThree.run();
 }
 
 main().then();
